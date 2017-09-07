@@ -23,4 +23,8 @@ while learning. The plan is to update this while I learn.
 ## Running
 - cd to workspace: cd ~/rviz_ws
 - if running for the first time, make the package: catkin_make
-- give permission: chmod 777 src/rviz-in-python/plot_cube.py
+- make the file an executable: chmod +x src/rviz-in-python/plot_cube.py
+- source: . devel/setup.bash
+- run roscore: roscore
+- run: rosrun rviz_in_python plot_cube.py
+- run RVIZ: rosrun rviz rviz
