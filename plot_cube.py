@@ -8,12 +8,15 @@ from visualization_msgs.msg import Marker
 
 if __name__ == '__main__':
 
-    rospy.loginfo('Starting Cube')
+    rospy.loginfo('Starting cube ...')
     base_frame = '/map'
     marker_topic = 'cube'
 
     # init node
     rospy.init_node('cube_node', anonymous=True)
+
+    # node frequency (Hz)
+    rate = rospy.Rate(10)
 
     # make the cube object
     cube_marker = Marker()
@@ -24,17 +27,18 @@ if __name__ == '__main__':
     cube_marker.type = cube_marker.CUBE
     cube_marker.lifetime = rospy.Duration(0.0)
 
+    # generate the publisher
     pub_cube = rospy.Publisher(marker_topic, Marker, queue_size=10)
 
     # wait while subscribers are detected on the publisher
     current_subscribers = pub_cube.get_num_connections()
     rospy.loginfo('Waiting for subscribers ...')
     while (current_subscribers == 0):
-                rospy.Rate(100).sleep()
+                rate.sleep()
                 current_subscribers = pub_cube.get_num_connections()
 
     # start sending the msg
-    rospy.loginfo('Starting msg ...')
+    rospy.loginfo('Starting message ...')
 
     while not rospy.is_shutdown():
 
@@ -65,6 +69,6 @@ if __name__ == '__main__':
 
         # publish msg
         pub_cube.publish(cube_marker)
-        rospy.Rate(10).sleep()
+        rate.sleep()
 
     rospy.loginfo('rospy shutdown')
