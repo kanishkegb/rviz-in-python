@@ -60,11 +60,11 @@ if __name__ == '__main__':
         # a (alpha) must be non-zero
         cube_marker.color.a = 1.0
         cube_marker.color.r = 1.0
-        cube_marker.color.g = 1.0
-        cube_marker.color.b = 1.0
+        cube_marker.color.g = 0.0
+        cube_marker.color.b = 0.0
 
         # publish msg
-        pub_Walrus.publish(cube_marker)
+        pub_cube.publish(cube_marker)
         rospy.Rate(10).sleep()
 
     rospy.loginfo('rospy shutdown')
