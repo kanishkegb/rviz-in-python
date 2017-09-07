@@ -21,9 +21,6 @@ while learning. The plan is to update this while I learn.
   - copy and paste the extracted 'rviz-in-python-master' inside ~/rviz_ws/src
 
 ## Running
-- If running for the first time, make the package:
-  - cd to workspace: cd ~/rviz_ws
-  - make: catkin_make
-
-- If you already made the package:
-  - 
+- cd to workspace: cd ~/rviz_ws
+- if running for the first time, make the package: catkin_make
+- give permission: chmod 777 src/rviz-in-python/plot_cube.py
