@@ -14,7 +14,7 @@ while learning. The plan is to update this while I learn.
 ## Get this repository
 - If you use git:
   - cd src
-  - git clone https://github.com/kanishkegb/rviz-in-python.git
+  - git clone https://github.com/kanishkegb/rviz_in_python.git
 - Else
   - download the zip file
   - extract the file
