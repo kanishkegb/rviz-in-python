@@ -4,7 +4,9 @@ wanted to do this with Python and could not find a better/simpler tutorial to
 do this anywhere. This repository will include each and every step I followed
 while learning. The plan is to update this while I learn.
 
-## Install ROS
+## Installing ROS
+- The easiest way is to run the bash file in [this repository](https://github.com/fdcl-gwu/ros-install)
+- If not, you can follow the steps in [ROS website](http://wiki.ros.org/ROS/Installation)
 
 ## Create a workspace (if needed)
 - mkdir -p ~/rviz_ws/src
@@ -19,6 +21,7 @@ while learning. The plan is to update this while I learn.
   - download the zip file
   - extract the file
   - copy and paste the extracted 'rviz-in-python-master' inside ~/rviz_ws/src
+  - rename 'rviz-in-python-master' to 'rviz-in-python'
 
 ## Running
 - cd to workspace: cd ~/rviz_ws
